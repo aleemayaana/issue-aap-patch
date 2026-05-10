@@ -1,0 +1,10 @@
+---
+- name: Linux OS Patching using Ansible AAP
+  hosts: linux_hosts
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - pre-upgrade
+    - yum-upgrade
+    - post-upgrade
